@@ -84,6 +84,31 @@ h3{
     color: #97264C;
     margin-top: 30px;
 }
+.music-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.music-text {
+    flex: 1;
+}
+
+.music-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.music-image img {
+    width: 100%;
+    max-width: 390px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
 .card-zon{
     display: flex;
@@ -388,6 +413,3 @@ h3{
         padding: 28px 12px;
     }
 }
-
-
-

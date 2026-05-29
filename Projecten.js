@@ -34,4 +34,41 @@ function prevImage() {
 }
 
 document.addEventListener("DOMContentLoaded", setImage);
+const logoBasePath = "Logo's/";
+
+const logoImages = [
+    "logo1.jpg",
+    "logo2.png",
+    "Logo3.png",
+    "logo4.jpg",
+    "logo5.jpg",
+    "logo6.jpeg",
+    "logo7.jpeg",
+    "logo8.jpeg",
+    "logo8.jpg",
+    "logo9.jpg",
+    "logo10.jpg",
+    "logo11.jpg",
+    "logo12.png",
+    "logo13.png"
+];
+
+let logoCurrent = 0;
+
+function setLogoImage() {
+    const imgEl = document.getElementById("logoSliderImage");
+    if (!imgEl) return;
+    imgEl.src = logoBasePath + encodeURIComponent(logoImages[logoCurrent]);
+}
+
+function nextLogo() {
+    logoCurrent = (logoCurrent + 1) % logoImages.length;
+    setLogoImage();
+}
+
+function prevLogo() {
+    logoCurrent = (logoCurrent - 1 + logoImages.length) % logoImages.length;
+    setLogoImage();
+}
+
 
